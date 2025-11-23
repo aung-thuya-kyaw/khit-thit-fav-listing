@@ -152,7 +152,6 @@ document.getElementById("searchInput").addEventListener("keyup", filterTable);
 document.getElementById("statusFilter").addEventListener("change", filterTable);
 document.getElementById("typeFilter").addEventListener("change", filterTable);
 document.getElementById("priceFilter").addEventListener("change", filterTable);
-document.getElementById("timeFilter").addEventListener("change", filterTable);
 
 function parsePriceNumber(priceStr) {
   if (!priceStr && priceStr !== 0) return 0;
