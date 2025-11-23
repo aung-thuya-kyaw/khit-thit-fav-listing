@@ -1,5 +1,5 @@
 // gviz JSON URL for your sheet
-const sheetURL = "https://docs.google.com/spreadsheets/d/1jAwrqILCSrxqmAi7YUt9Z-MFC-MCbRjtfRxCHRjl7IY/gviz/tq?tqx=out:json";
+ const sheetURL = "https://docs.google.com/spreadsheets/d/1jAwrqILCSrxqmAi7YUt9Z-MFC-MCbRjtfRxCHRjl7IY/gviz/tq?tqx=out:json";
 
 let allData = [];
 
@@ -189,7 +189,6 @@ function filterTable() {
       const priceValue = parsePriceNumber(item.price);
       if (priceValue < min || priceValue > max) ok = false;
     }
-
     return ok;
   });
 
@@ -281,32 +280,32 @@ function toggleFav(id) {
 
 // 
 
-function renderFavorites() {
-    const favBody = document.getElementById("favBody");
-    const favs = getFavorites();
+// function renderFavorites() {
+//     const favBody = document.getElementById("favBody");
+//     const favs = getFavorites();
 
-    favBody.innerHTML = "";
+//     favBody.innerHTML = "";
 
-    const favList = allData.filter(item => favs.includes(item.id));
+//     const favList = allData.filter(item => favs.includes(item.id));
 
-    favList.forEach((item, index) => {
-        favBody.innerHTML += `
-        <tr>
-            <td>${index + 1}</td>
-            <td>${item.id}</td>
-            <td>${item.type}</td>
-            <td>${item.address}</td>
-            <td>${item.feet}</td>
-            <td>${item.price}</td>
-        </tr>
-        `;
-    });
-}
-
-
+//     favList.forEach((item, index) => {
+//         favBody.innerHTML += `
+//         <tr>
+//             <td>${index + 1}</td>
+//             <td>${item.id}</td>
+//             <td>${item.type}</td>
+//             <td>${item.address}</td>
+//             <td>${item.feet}</td>
+//             <td>${item.price}</td>
+//         </tr>
+//         `;
+//     });
+// }
 
 
-renderFavorites();
+
+
+// renderFavorites();
 
 // top button
 
