@@ -13,12 +13,26 @@ body {
     font-weight: bold;
 }
 
-/* Filter Bar */
+/* Filter Bar 
 .filter-bar {
     display: flex;
     gap: 10px;
     justify-content: center;
     margin-bottom: 20px;
+} */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Search bar fixed width */
+#searchInput {
+    width: 300px;
+    max-width: 100%;
 }
 
 .filter-bar input,
