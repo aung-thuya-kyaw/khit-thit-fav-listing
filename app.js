@@ -190,30 +190,6 @@ function filterTable() {
       if (priceValue < min || priceValue > max) ok = false;
     }
 
-    const timeF = document.getElementById("timeFilter").value;
-
-if (timeF) {
-    const itemTime = new Date(item.timestamp);
-    const now = new Date();
-
-    if (timeF === "today") {
-        const isToday = itemTime.toDateString() === now.toDateString();
-        if (!isToday) ok = false;
-    }
-
-    if (timeF === "week") {
-        const oneWeek = 7 * 24 * 60 * 60 * 1000;
-        if (now - itemTime > oneWeek) ok = false;
-    }
-
-    if (timeF === "month") {
-        const sameMonth = itemTime.getMonth() === now.getMonth() &&
-                          itemTime.getFullYear() === now.getFullYear();
-        if (!sameMonth) ok = false;
-    }
-}
-
-
     return ok;
   });
 
