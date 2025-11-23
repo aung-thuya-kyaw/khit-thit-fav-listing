@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bago City Home Listings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="title">ခေတ်သစ်အိမ်ခြံမြေ အရောင်း အချက်အလက်များ</h1>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+        <input id="searchInput" type="text" placeholder="ရှာရန်... (လိပ်စာ၊ အိမ်/မြေ၊ ID)">
+
+        <select id="statusFilter">
+            <option value="">အနေအထား (အားလုံး)</option>
+            <option value="Active">Active</option>
+            <option value="Sold">Sold</option>
+        </select>
+
+        <select id="typeFilter">
+            <option value="">အိမ်/မြေကွက် (အားလုံး)</option>
+            <option value="House">အိမ်(အသင့်အတင့်)</option>
+            <option value="Land">မြေကွက်</option>
+            <option value="Condo">အိမ်(တိုက်အိမ်)</option>
+        </select>
+
+        <select id="priceFilter">
+            <option value="">စျေးနှုန်း (အားလုံး)</option>
+            <option value="0-100">0 - 100 သိန်း</option>
+            <option value="100-300">100 - 300 သိန်း</option>
+            <option value="300-1000">300 - 1000 သိန်း</option>
+            <option value="1000-99999">1000 သိန်း ထက်ပို</option>
+        </select>
+
+        <select id="timeFilter">
+    <option value="">အချိန် (အားလုံး)</option>
+    <option value="today">ယနေ့</option>
+    <option value="week">တစ်ပတ်အတွင်း </option>
+    <option value="month">ဤလအတွင်း</option>
+</select>
+
+    </div>
+
+    <div class="top-buttons">
+        <button id="showAllBtn">📄 All Listings</button>
+        <button id="showFavBtn">❤️ Favorites</button>
+        <button id="clearFavBtn">❌ Remove Favorites</button>
+    </div>
+
+    <!--add count-->
+    <div id="listingCount" class="count-box">Total Listings: 0</div>
+
+
+    <div class="columnatk">
+        <!-- TABLE -->
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>စဉ်</th>
+                    <th>ID</th>
+                    <th>အိမ်/မြေကွက်</th>
+                    <th>လိပ်စာ</th>
+                    <th>ပေအကျယ်</th>
+                    <th>ဈေး</th>
+                    <th>Fav</th>
+
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+        <!-- Fav -->
+        <!-- <h2 class="fav-title">❤️ My Favorite Properties</h2>-->
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>စဉ်</th>
+                    <th>ID</th>
+                    <th>အိမ်/မြေကွက်</th>
+                    <th>လိပ်စာ</th>
+                    <th>ပေအကျယ်</th>
+                    <th>ဈေး</th>
+                </tr>
+            </thead>
+            <tbody id="favBody"></tbody>
+        </table>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
